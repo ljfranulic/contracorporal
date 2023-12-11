@@ -26,7 +26,12 @@ nav ul li + li {
 nav ul li:last-child {
   margin-left: auto;
 }
-main {
+.titulo {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 5rem;
+}
+.grupo {
   background-color: #000000;
   color: #ffffff;
   padding: 1.25rem 1rem;
@@ -36,20 +41,24 @@ main {
 
 }
 @media screen and (orientation:portrait) {
-  main {
+  .grupo {
     flex-direction: column;
   }
  }
 @media screen and (orientation:landscape) {
-  main {
+  .grupo {
     flex-direction: row;
   }
   .wrapper-botones-tracklist {
     margin-top: 1rem;
   }
+  .titulo {
+    margin-bottom: 2.5rem;
+    margin-top: 5rem;
+  }
  }
-main:before {
-  content: "CONTRACORPORAL";
+.grupo:before {
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -98,8 +107,22 @@ footer a {
   </nav>
 </header>
 <main>
+<div class="grupo esconde">
+  <img src="esconde.jpg" style="margin: 0 auto; max-height: 30rem; padding: 6rem;">
+  <div class="wrapper-botones-tracklist">
+    <p class="titulo">Esconde La Sed</p>
+    <div class="botones">
+    <a class="boton" href="https://open.spotify.com/track/35eDHnekgS0Pi0057TeI0c?si=def972bc5d5747f0">Spotify</a>
+    <a class="boton" href="https://music.apple.com/cl/album/esconde-la-sed-single/1717188992?l=en-GB">Apple/Itunes</a>
+    <a class="boton" href="https://music.youtube.com/watch?v=WBvmStBmzGc&sq=1&si=pOtJhulRUpTylXK-">Youtube</a>
+    <a class="boton" href="https://music.amazon.com/albums/B0CNKY7CBL?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=CL&ref=dm_sh_VczKRQK8n3scWWFoKVMTM114l&trackAsin=B0CNKXZKJP">Amazon</a>
+    </div>
+  </div>
+</div>
+<div class="grupo contracorporal">
   <img src="contracorporal.png" style="margin: 0 auto; max-height: 50rem;">
   <div class="wrapper-botones-tracklist">
+    <p class="titulo">Contracorporal</p>
     <div class="botones">
     <a class="boton" href="https://open.spotify.com/album/2wTV7TD74CuoJq30FAFC63?si=NdTgGLNNTZu6HWMS_5CEeA">Spotify</a>
     <a class="boton" href="https://geo.music.apple.com/us/album/contracorporal/1699457427?itsct=music_box_link&itscg=30200&ls=1&app=music">Apple/Itunes</a>
@@ -162,9 +185,9 @@ footer a {
     <td>1 Dir(s)</td>
     <td>846275745 bytes free</td>
   </tr>
-</table>
+  </table>
   </div>
-  
+</div>
 </main>
 <footer>
   <a href="https://www.instagram.com/_macr_os_/">Instagram</a>
